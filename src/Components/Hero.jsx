@@ -1,32 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import hero from '../assets/home hero.jfif'; // Replace with your image path
 
 const Hero = () => {
   return (
-    <section className="bg-green-50 py-20 px-6 relative overflow-hidden">
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: `url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><rect width="100%" height="100%" fill="%234a90e2"/></svg>')`, // Placeholder for actual image
-        }}
-      >
-        {/* Overlay to enhance text readability */}
-        <div className="absolute inset-0 bg-green-800 opacity-40"></div>
-      </div>
+    <section className="bg-gradient-to-b from-blue-400 via-white to-green-300 py-20 px-6 relative overflow-hidden">
+      {/* Optional floating cloud shapes (decorative white blobs) */}
+      <div className="absolute top-10 left-10 w-40 h-40 bg-white rounded-full opacity-20 blur-2xl animate-pulse"></div>
+      <div className="absolute top-20 right-20 w-32 h-32 bg-white rounded-full opacity-10 blur-2xl animate-pulse"></div>
 
-      <div className="max-w-6xl mx-auto relative z-10 flex flex-col md:flex-row items-center justify-between">
+      <div className="max-w-6xl mx-auto relative z-10 flex flex-col items-center text-center md:text-left md:flex-row md:justify-between">
         {/* Text Content */}
-        <div className="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+        <div className="md:w-3/5">
+          <h1 className="text-4xl md:text-5xl font-bold text-green-900 mb-4 leading-tight">
             Empowering a Sustainable Future
           </h1>
-          <p className="text-lg text-white mb-6">
+          <p className="text-lg text-green-800 mb-6">
             Ecosustain Solutions partners with individuals and organizations to reduce environmental impact through innovative green technologies, eco-friendly consulting, and sustainable development strategies.
           </p>
 
-          <ul className="text-white space-y-2 mb-6 text-left">
+          <ul className="text-green-900 space-y-2 mb-6 text-left">
             <li>🌱 Eco-Friendly Consulting</li>
             <li>⚡ Renewable Energy Solutions</li>
             <li>📊 Environmental Impact Assessments</li>
@@ -35,19 +27,10 @@ const Hero = () => {
 
           <Link
             to="/contact"
-            className="inline-block bg-white text-green-700 px-6 py-3 rounded-lg hover:bg-gray-100 transition"
+            className="inline-block bg-green-700 text-white px-6 py-3 rounded-lg hover:bg-green-800 transition"
           >
             Get In Touch
           </Link>
-        </div>
-
-        {/* Optional Image or Illustration */}
-        <div className="md:w-1/2 flex justify-center">
-          <img
-            src={hero} 
-            alt="Sustainable Future"
-            className="w-full max-w-md rounded-lg shadow-lg hidden md:block"
-          />
         </div>
       </div>
     </section>
