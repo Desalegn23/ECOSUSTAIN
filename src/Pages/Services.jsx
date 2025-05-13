@@ -45,7 +45,7 @@ const services = [
 function Services() {
   return (
     <div className="container mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-center text-green-700 mb-4">Our Services</h1>
+      <h1 className="text-3xl font-bold text-center text-green-700 mb-4">Our Core Services</h1>
       <p className="text-center text-gray-600 mb-10 max-w-2xl mx-auto">
         Explore our range of eco-friendly services designed to promote sustainability and environmental responsibility.
       </p>
