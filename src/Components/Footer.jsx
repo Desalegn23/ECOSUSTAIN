@@ -51,26 +51,26 @@ function Footer() {
         <div className="footer-section">
           <h3 className="text-lg font-semibold mb-2">Socials</h3>
           <ul className="space-y-1 text-sm">
-            <li>
+            {/* <li>
               <a href="https://facebook.com/ecosustain" target="_blank" rel="noopener noreferrer" className="hover:underline">
                 Facebook
               </a>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <a href="https://twitter.com/ecosustain" target="_blank" rel="noopener noreferrer" className="hover:underline">
                 Twitter
               </a>
-            </li>
+            </li> */}
             <li>
               <a href="https://www.linkedin.com/company/ecosustain-solutions/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="hover:underline">
                 LinkedIn
               </a>
             </li>
-            <li>
+            {/* <li>
               <a href="https://youtube.com/ecosustain" target="_blank" rel="noopener noreferrer" className="hover:underline">
                 YouTube
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
