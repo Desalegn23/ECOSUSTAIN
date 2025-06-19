@@ -52,7 +52,7 @@ const Hero = () => {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                to="/solutions"
+                to="/services"
                 className="px-6 py-4 bg-green-600 text-white font-semibold rounded-lg shadow hover:shadow-md hover:bg-green-700 transition"
               >
                 Discover Our Solutions <ChevronRight className="inline-block ml-2 w-4 h-4" />
