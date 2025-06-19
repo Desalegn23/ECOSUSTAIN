@@ -13,35 +13,35 @@ const services = [
     description: "Helping businesses reduce their carbon footprint through sustainable strategies and operational improvements.",
     icon: "🌿",
     image: ecoFriendlyImage,
-    link: "/services/eco-friendly-consulting"
+    link: "/eco-friendly-consulting"
   },
   {
     title: "Green Technology Solutions",
     description: "Implementing cutting-edge technology solutions that are both effective and environmentally responsible.",
     icon: "💡",
     image: greenTechImage,
-    link: "/services/green-technology"
+    link: "/green-technology-solutions"
   },
   {
     title: "Impact Assessment",
     description: "Comprehensive analysis of your environmental impact and recommendations for improvement.",
     icon: "📊",
     image: impactAssessmentImage,
-    link: "/services/impact-assessment"
+    link: "/environmental-impact-assessments"
   },
   {
     title: "ESG Reporting",
     description: "Helping you communicate your sustainability efforts through comprehensive ESG reporting.",
     icon: "📈",
     image: esgReportingImage,
-    link: "/services/esg-reporting"
+    link: "/esg-integration-reporting"
   },
   {
     title: "ISO Certification",
     description: "Guiding businesses through the process of obtaining ISO 14001 and other environmental certifications.",
     icon: "✅",
     image: isoCertificationImage,
-    link: "/services/iso-certification"
+    link: "/iso-certification-support"
   },
   {
     title: "Sustainability Training",
