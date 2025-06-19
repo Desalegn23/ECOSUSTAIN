@@ -13,6 +13,7 @@ import EsgIntegrationReporting from "./Components/ServiceDetail/ESGIntegrationRe
 import NotFound from "./Pages/NotFound";
 import Home from "./Pages/Home";
 import BlogPage from "./Pages/Blog.jsx";
+import BlogDetail from "./Pages/BlogDetail";
 function App() {
   return (
     <Router>
@@ -44,6 +45,7 @@ function App() {
         />
         <Route path="/contact" element={<Contact />} />
         <Route path="/blog" element={<BlogPage />} />
+        <Route path="/blog/:slug" element={<BlogDetail />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
