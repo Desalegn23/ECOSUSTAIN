@@ -22,19 +22,17 @@ function Navbar() {
       <div className="container mx-auto max-w-7xl flex justify-between items-center px-4 sm:px-6 lg:px-12 py-4 relative">
         
         {/* Logo + Brand */}
-        <Link to="/" onClick={closeMenu} className="relative flex items-center space-x-2">
-          <div className="relative">
+        <Link to="/" onClick={closeMenu} className="relative flex items-center space-x-3">
+          <div className="relative h-12 w-12">
             <img
               src={logo}
               alt="Ecosustain Logo"
-              className="h-12 w-12 object-contain transition-transform duration-200 transform hover:scale-110"
+              className="h-full w-full object-cover rounded-full border-2 border-emerald-300 p-0.5 transition-all duration-300 hover:shadow-lg hover:border-emerald-200"
             />
-            {/* Circular Border */}
-            <div className="absolute inset-0 border-4 border-yellow-400 rounded-full opacity-0 hover:opacity-100 transition-opacity duration-200"></div>
           </div>
           <div className="flex flex-col">
             <span className="text-white text-lg font-semibold">ECOSUSTAIN</span>
-            <span className="text-yellow-400 text-sm font-semibold">SOLUTIONS</span>
+            <span className="text-emerald-300 text-sm font-semibold">SOLUTIONS</span>
           </div>
         </Link>
 
