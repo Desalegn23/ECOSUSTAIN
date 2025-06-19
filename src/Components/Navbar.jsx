@@ -23,7 +23,7 @@ function Navbar() {
         
         {/* Logo + Brand */}
         <Link to="/" onClick={closeMenu} className="relative flex items-center space-x-3">
-          <div className="relative h-12 w-12">
+          <div className="relative h-16 w-16">
             <img
               src={logo}
               alt="Ecosustain Logo"
