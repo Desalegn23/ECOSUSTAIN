@@ -1,30 +1,33 @@
 // Components/ServiceCard.js
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
-function ServiceCard({ title, description, icon, link }) {
+function ServiceCard({ title, description, icon, image, link }) {
   return (
-    <div
-      className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:bg-green-50 hover:-translate-y-2 transition duration-300 transform border border-gray-200"
-    >
-      <div className="flex items-center mb-4">
-        <span
-          className="text-4xl mr-4 hover:text-green-700 hover:rotate-12 transition duration-300 transform"
-          style={{ display: 'inline-block' }}
-        >
-          {icon}
-        </span>
-        <h2 className="text-xl font-semibold text-green-700">{title}</h2>
-      </div>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <div className="text-right">
-        <Link
-          to={`/services/${title.toLowerCase().replace(/&/g, 'and').replace(/[^\w\s-]/g, '').replace(/\s+/g, '-')}`}
-          className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-800 transition duration-300"
-          
-        >
-          Learn More &rarr;
-        </Link>
+    <div className="bg-white rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col">
+      <img
+        src={image}
+        alt={title}
+        className="w-full h-64 object-cover"
+      />
+      <div className="p-8 flex-1 flex flex-col">
+        <div className="flex items-center space-x-3 mb-4">
+          <span className="text-2xl">{icon}</span>
+          <h3 className="text-2xl font-bold text-[#2D5A3D]">{title}</h3>
+        </div>
+        
+        <p className="text-gray-700 mb-6">{description}</p>
+        
+        <div className="mt-auto">
+          <Link
+            to={link}
+            className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300"
+          >
+            Learn More
+            <ArrowRight className="ml-2 w-4 h-4" />
+          </Link>
+        </div>
       </div>
     </div>
   );
