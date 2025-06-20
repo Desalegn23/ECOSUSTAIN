@@ -5,7 +5,7 @@ function Footer() {
 
   return (
     <footer className="bg-green-800 text-white py-10 px-4 mt-16">
-      <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8">
+      <div className="max-w-6xl mx-auto grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-6 md:gap-8">
         {/* Ecosustain Section */}
         <div className="footer-section">
           <h3 className="text-lg font-bold mb-2">Ecosustain</h3>
