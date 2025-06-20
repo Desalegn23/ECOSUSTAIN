@@ -1,6 +1,6 @@
 ﻿import React from 'react';
 import ServiceDetailLayout from './ServiceDetailLayout';
-import impactImage from '../../../assets/images/impact-assessment.png';
+import impactImage from '../../assets/images/impact-assessment.webp';
 
 const EnvironmentalImpactAssessments = () => {
   const serviceData = {
