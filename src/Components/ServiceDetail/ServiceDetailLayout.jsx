@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, ChevronDown, ChevronUp } from 'lucide-react';
 import PageLayout from '../PageLayout';
 
 const ServiceDetailLayout = ({ 
@@ -12,6 +12,12 @@ const ServiceDetailLayout = ({
   faqs = [],
   ctaText = "Get Started"
 }) => {
+  const [expandedFaq, setExpandedFaq] = useState(null);
+
+  const toggleFaq = (index) => {
+    setExpandedFaq(expandedFaq === index ? null : index);
+  };
+
   return (
     <PageLayout
       title={title}
@@ -48,7 +54,6 @@ const ServiceDetailLayout = ({
             </div>
           </div>
         </section>
-
 
         {/* Features Section */}
         {features.length > 0 && (
@@ -92,9 +97,31 @@ const ServiceDetailLayout = ({
             <h3 className="text-xl font-semibold text-green-800 mb-6">Frequently Asked Questions</h3>
             <div className="space-y-4">
               {faqs.map((faq, index) => (
-                <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                  <h4 className="font-medium text-gray-900">{faq.question}</h4>
-                  <p className="mt-2 text-gray-600">{faq.answer}</p>
+                <div key={index} className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
+                  <button
+                    className="w-full flex items-center justify-between p-6 text-left focus:outline-none"
+                    onClick={() => toggleFaq(index)}
+                    aria-expanded={expandedFaq === index}
+                    aria-controls={`faq-${index}`}
+                  >
+                    <h4 className="text-base font-medium text-gray-900 pr-4">
+                      {faq.question}
+                    </h4>
+                    {expandedFaq === index ? (
+                      <ChevronUp className="w-5 h-5 text-green-600 flex-shrink-0" />
+                    ) : (
+                      <ChevronDown className="w-5 h-5 text-green-600 flex-shrink-0" />
+                    )}
+                  </button>
+                  <div
+                    id={`faq-${index}`}
+                    className={`px-6 pb-6 pt-0 transition-all duration-300 ease-in-out ${
+                      expandedFaq === index ? 'block' : 'hidden'
+                    }`}
+                    aria-hidden={expandedFaq !== index}
+                  >
+                    <p className="text-gray-600">{faq.answer}</p>
+                  </div>
                 </div>
               ))}
             </div>
